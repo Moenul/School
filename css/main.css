@@ -4,11 +4,15 @@
 }
 @font-face {
     font-family: "LiNiladriRongtuliUnicode";
-    src: url("/FrontEnd/Madrasah/fonts/Li Alinur Tatsama Unicode.ttf");
+    src: url("/FrontEnd/School/fonts/Li Alinur Tatsama Unicode.ttf");
+}
+@font-face {
+    font-family: "BenSenHandwriting";
+    src: url("/FrontEnd/School/fonts/BenSenHandwriting.ttf");
 }
 @font-face {
     font-family: "Jomhuria";
-    src: url("/FrontEnd/Madrasah/fonts/Jomhuria-Regular.ttf");
+    src: url("/FrontEnd/School/fonts/Jomhuria-Regular.ttf");
 }
 /* .first_bg_style{
     font-family: 'LiNiladriRongtuliUnicode', sans-serif;
@@ -78,14 +82,26 @@ body {
 
 /* /////  Top Nav Section End ------------------- */
 
+/* /////  Middle Nav Section Start ------------------- */
+.middle_nav{
+    width: 100%;
+    height: 60px;
+    padding: 0px 0px;
+    background: white;
+    overflow: hidden;
+}
+.middle_nav img{
+    width: 100%;
+}
+/* /////  Middle Nav Section End ------------------- */
 
 /* /////  Nav Bar Section Start ------------------- */
 .nav_bar{
     width: 100%;
     background: #6aad46c7;
-    padding: 25px 0px;
+    padding: 10px 0px;
     position: fixed;
-    top: 35px;
+    top: 95px;
     transition: all .5s ease-in-out;
     z-index: 100;
 }
@@ -98,16 +114,16 @@ body {
     height: 45px;
     float: left;
     position: relative;
-    /* margin-left: 50px; */
+    margin-left: 30px;
     transition: all .3s ease-in-out;
 }
 .nav_bar .nav_brand img{
     width: 100%;
-    scale:3.3;
+    scale:3.5;
     transition: all .5s ease-in-out;
 }
 .nav_bar .nav_list{
-    width: calc(100% - 45px);
+    width: calc(100% - 75px);
     display: inline-block;
 }
 
@@ -118,9 +134,9 @@ body {
     padding: 10px 0px !important;
     top: 0px !important;
 }
-.nav_bar_active .nav_brand{
+/* .nav_bar_active .nav_brand{
     margin-left: 0px !important;
-}
+} */
 .nav_bar_active .nav_brand img{
     scale:1.3 !important;
 }
@@ -145,14 +161,11 @@ body {
 .nav_bar .nav_list li:hover{
     color: var(--color-hover);
 }
-.nav_bar .nav_list a:nth-child(1) li,
-.nav_bar .nav_list a:nth-child(2) li{
+
+.nav_bar .nav_list a:nth-child(1) li{
     color: var(--color-smart-black);
 }
 .nav_bar .nav_list a:nth-child(1) li:hover{
-    background: #f1b92e !important;
-}
-.nav_bar .nav_list a:nth-child(2) li:hover{
     background: #48cd00 !important;
 }
 
@@ -218,14 +231,21 @@ body {
 .header_section .container p {
     width: 100%;
     text-align: center;
-    font-family: 'Jomhuria', sans-serif;
+    font-family: 'LiNiladriRongtuliUnicode', sans-serif;
     position: absolute;
-    font-size: 120px;
-    color: #ffffffe0;
-    top: 50%;
+    font-size: 80px;
+    color: white;
+    top: 40%;
     left: 0;
-    font-weight: bold;
-    -webkit-text-stroke: 0.1px #4c4c4c;
+    text-shadow: -4px 4px 5px #404040;
+}
+.header_section .container p span{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-family: 'LiNiladriRongtuliUnicode', sans-serif;
+    font-size: 40px;
+    color: white;
     text-shadow: -4px 4px 5px #404040;
 }
 /* /////  Header Section End ------------------- */
@@ -545,12 +565,54 @@ body {
     color: #548d5a;
 }
 .about_section .about_desc_bar p{
-    font-size: 20px;
+    font-size: 16px;
     width: 80%;
+    height: 400px;
+    overflow-x: scroll;
     margin: 0 auto;
 }
 
+.about_section .about_desc_bar p::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 40px;
+}
+.about_section .about_desc_bar p::-webkit-scrollbar-thumb {
+	background-color: var(--color-smart-black);
+    border: 3px solid #ffffffc7;
+    border-radius: 10px;
+}
+
 /* /////  About Section End ------------------- */
+
+
+
+
+/* /////  Professor Section Start ------------------- */
+.institute_head{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 60px;
+}
+.institute_head .institute_head_img{
+    overflow: hidden;
+    padding: 50px;
+}
+.institute_head .institute_head_img img{
+    width: 100%;
+}
+.institute_head .name{
+    font-size: 30px;
+}
+.institute_head .title{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #373737;
+}
+
+
+
+
+/* /////  Professor Section End ------------------- */
 
 /* /////  Donor Member Section Start ------------------- */
 
@@ -641,7 +703,7 @@ body {
     padding:40px 0px 0px 0px;
 }
 .instructor_section .instructors{
-    height: 230px;
+    height: 250px;
 }
 .instructor_section .instructors .instructor{
     width: 200px;
@@ -653,8 +715,8 @@ body {
     margin-right: 0px;
 }
 .instructor_section .instructors .instructor .photo{
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     margin: 0 auto;
     border: 5px solid var(--color-deep);
     margin-bottom: 10px;
@@ -1054,6 +1116,15 @@ body {
 }
 /* /// iPad Air ///  Navbar End ------------------- */
 
+/* /// iPad Air ///  Header Section Start ------------------- */
+.header_section .container p {
+    font-size: 60px;
+}
+.header_section .container p span{
+    font-size: 30px;
+}
+/* /// iPad Air ///  Header Section End ------------------- */
+
 /* /// iPad Air ///  Update Section Start ------------------- */
 .updates_section .notice_section {
     width: 55%;
@@ -1143,7 +1214,7 @@ body {
 .nav_bar {
     background: var(--color-main);
     padding: 10px 0px !important;
-    top: 35px;
+    top: 95px;
     border-bottom: 4px solid var(--color-hover);
 }
 
@@ -1205,7 +1276,7 @@ body {
     letter-spacing: 1px;
     margin-bottom: 5px;
 }
-.nav_bar .nav_list a:nth-child(1) li, .nav_bar .nav_list a:nth-child(2) li {
+.nav_bar .nav_list a:nth-child(1) li{
     text-align: center;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -1284,13 +1355,14 @@ body {
 
 .header_section{
     padding-top: 60px;
-    background: var(--color-smart-black);
+    background:white;
 }
 .header_section .header_slider {
-    height: 50vh;
+    height: 40vh;
 }
 .header_section .container p {
-    font-size: 70px;
+    top: 50%;
+    font-size: 40px;
 }
 /* /// MiniMax ///  Header Section End ------------------- */
 
@@ -1442,9 +1514,14 @@ body {
 
 
 /* /// iPhone S ///  Header Section Start ------------------- */
+.header_section .header_slider {
+    height: 35vh;
+}
 .header_section .container p {
-    font-size: 70px;
-    line-height: 1;
+    font-size: 30px;
+}
+.header_section .container p span{
+    font-size: 25px;
 }
 /* /// iPhone S ///  Header Section End ------------------- */
 
