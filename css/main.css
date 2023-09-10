@@ -707,9 +707,12 @@ body {
 }
 .instructor_section .instructors .instructor{
     width: 200px;
-    height: 250px;
+    height: 230px;
     margin-right: 30px;
     display: inline-block;
+    overflow: hidden;
+    padding: 5px;
+    transition: all .3s ease-in-out;
 }
 .instructor_section .instructors .instructor:nth-last-child(1) {
     margin-right: 0px;
@@ -720,24 +723,46 @@ body {
     margin: 0 auto;
     border: 5px solid var(--color-deep);
     margin-bottom: 10px;
+    margin-top: 5px;
     border-radius: 50%;
     overflow: hidden;
+    transition: all .3s ease-in-out;
 }
 .instructor_section .instructors .instructor .photo img{
     width: 100%;
 }
-.instructor_section .instructors .instructor .name{
-    font-size: 16px;
-    text-align: center;
-    color: var(--color-deep);
-    word-spacing: -2px;
-}
-.instructor_section .instructors .instructor .title{
-    font-size: 16px;
+.instructor_section .instructors .instructor .desc{
+    width: 100%;
+    height: auto;
     text-align: center;
     color: var(--color-smart-black);
 }
-
+.instructor_section .instructors .instructor .desc .name{
+    font-size: 16px;
+    color: var(--color-deep);
+    word-spacing: -2px;
+}
+.instructor_section .instructors .instructor .desc .title{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.instructor_section .instructors .instructor .desc .qualification{
+    font-size: 14px;
+}
+.instructor_section .instructors .instructor .desc .phone{
+    font-size: 14px;
+}
+.instructor_section .instructors .instructor:hover{
+    background: beige;
+    border-radius: 5px;
+}
+.instructor_section .instructors .instructor:hover .photo{
+    width: 120px;
+    height: 120px;
+}
+.instructor_section .instructors .instructor:hover .title{
+    margin-bottom: 0px;
+}
 
 /* /////  Instructor Section End ------------------- */
 
